@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MyFirstApp</string>
+    <string name="titol_main">Consultori de frases</string>
+    <string name="button_consells">Consells</string>
+    <string name="button_frases">Frases Fetes</string>
+
+    <string name="textId">Id</string>
+    <string name="textAutor">Autor</string>
+    <string name="textFrase">Frase</string>
+
+    <string name="identificadorId">Id</string>
+    <string name="identificadorAutor">Autor</string>
+    <string name="identificadorFrase">Frase</string>
+
+    <string name="speakLogo">SpeakLogo</string>
+    <string name="appLogo">appLogo</string>
+
+
+
+</resources>
+
+

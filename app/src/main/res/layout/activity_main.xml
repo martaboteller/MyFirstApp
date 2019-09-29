@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="-14dp"
+    tools:layout_editor_absoluteY="-133dp">
+
+    <TextView
+        android:id="@+id/titol_main"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="50dp"
+        android:height="100dp"
+        android:gravity="center"
+        android:text="@string/titol_main"
+        android:textColor="#FF008080"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button_consells"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appLogo" />
+
+    <Button
+        android:id="@+id/button_consells"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:text="@string/button_consells"
+        app:layout_constraintBottom_toTopOf="@+id/button_frases"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titol_main" />
+
+    <Button
+        android:id="@+id/button_frases"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:text="@string/button_frases"
+        app:layout_constraintBottom_toTopOf="@+id/textFrases"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_consells" />
+
+    <TextView
+        android:id="@+id/textFrases"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="65dp"
+        android:width="250dp"
+        android:height="50dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/Teal"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_frases" />
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="75dp"
+        android:layout_height="63dp"
+        android:contentDescription="@string/appLogo"
+        app:layout_constraintBottom_toTopOf="@+id/titol_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/speak" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

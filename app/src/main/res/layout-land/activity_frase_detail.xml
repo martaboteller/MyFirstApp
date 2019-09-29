@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FraseDetailActivity">
+
+    <TextView
+        android:id="@+id/textFrase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="91dp"
+        android:layout_marginRight="91dp"
+        android:width="400dp"
+        android:height="90dp"
+        android:text="@string/textFrase"
+        android:textColor="@color/Black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/identificadorFrase" />
+
+    <TextView
+        android:id="@+id/textAutor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="400dp"
+        android:height="40dp"
+        android:text="@string/textAutor"
+        android:textColor="@color/Black"
+        app:layout_constraintBottom_toTopOf="@+id/identificadorFrase"
+        app:layout_constraintEnd_toEndOf="@+id/identificadorFrase"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/identificadorFrase"
+        app:layout_constraintTop_toBottomOf="@+id/identificadorAutor" />
+
+    <TextView
+        android:id="@+id/textId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="400dp"
+        android:height="40dp"
+        android:text="@string/textId"
+        android:textColor="@color/Black"
+        app:layout_constraintBottom_toTopOf="@+id/identificadorAutor"
+        app:layout_constraintEnd_toEndOf="@+id/identificadorAutor"
+        app:layout_constraintStart_toStartOf="@+id/identificadorAutor"
+        app:layout_constraintTop_toBottomOf="@+id/identificadorId" />
+
+    <TextView
+        android:id="@+id/identificadorId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="400dp"
+        android:clickable="false"
+        android:text="@string/identificadorId"
+        android:textColor="@color/Teal"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textId"
+        app:layout_constraintEnd_toEndOf="@+id/textFrase"
+        app:layout_constraintStart_toStartOf="@+id/textFrase"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/identificadorFrase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="400dp"
+        android:clickable="false"
+        android:text="@string/identificadorFrase"
+        android:textColor="@color/Teal"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textFrase"
+        app:layout_constraintEnd_toEndOf="@+id/textFrase"
+        app:layout_constraintStart_toStartOf="@+id/textFrase"
+        app:layout_constraintTop_toBottomOf="@+id/textAutor" />
+
+    <TextView
+        android:id="@+id/identificadorAutor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="400dp"
+        android:clickable="false"
+        android:text="@string/identificadorAutor"
+        android:textColor="@color/Teal"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textAutor"
+        app:layout_constraintEnd_toEndOf="@+id/textAutor"
+        app:layout_constraintStart_toStartOf="@+id/textAutor"
+        app:layout_constraintTop_toBottomOf="@+id/textId" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="49dp"
+        android:layout_marginRight="49dp"
+        android:contentDescription="@string/speakLogo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textAutor"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.434"
+        app:srcCompat="@mipmap/speak" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
