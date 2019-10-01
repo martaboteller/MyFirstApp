@@ -12,7 +12,6 @@
         android:id="@+id/titol_main"
         android:layout_width="260dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="50dp"
         android:height="100dp"
         android:gravity="center"
         android:text="@string/titol_main"
@@ -53,14 +52,12 @@
         android:id="@+id/textFrases"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="65dp"
         android:width="250dp"
         android:height="50dp"
         android:gravity="center_horizontal"
         android:textColor="@color/Teal"
         android:textSize="13sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageMore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,5 +74,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/speak" />
+
+    <ImageView
+        android:id="@+id/imageMore"
+        android:layout_width="48dp"
+        android:layout_height="34dp"
+        android:contentDescription="@string/iconMore"
+        android:tint="#009688"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFrases"
+        app:srcCompat="@mipmap/more" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

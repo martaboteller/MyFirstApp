@@ -12,8 +12,6 @@
         android:id="@+id/titol_main"
         android:layout_width="260dp"
         android:layout_height="28dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
         android:layout_marginTop="46dp"
         android:gravity="center"
         android:text="@string/titol_main"
@@ -22,7 +20,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/appLogo"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -30,47 +28,49 @@
         android:layout_width="120dp"
         android:layout_height="30dp"
         android:layout_marginTop="66dp"
-        android:layout_marginBottom="97dp"
         android:background="@drawable/border"
         android:text="@string/button_consells"
-        app:layout_constraintBottom_toTopOf="@+id/textFrases"
         app:layout_constraintEnd_toStartOf="@+id/button_frases"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/appLogo" />
 
     <Button
         android:id="@+id/button_frases"
         android:layout_width="120dp"
         android:layout_height="30dp"
+        android:layout_marginTop="81dp"
         android:background="@drawable/border"
         android:text="@string/button_frases"
-        app:layout_constraintBottom_toBottomOf="@+id/button_consells"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button_consells"
-        app:layout_constraintTop_toTopOf="@+id/button_consells" />
+        app:layout_constraintTop_toBottomOf="@+id/titol_main" />
 
     <TextView
         android:id="@+id/textFrases"
         android:layout_width="400dp"
         android:layout_height="75dp"
-        android:layout_marginBottom="54dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="38dp"
         android:width="250dp"
         android:height="50dp"
         android:gravity="center_horizontal"
         android:textColor="@color/Teal"
         android:textSize="13sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageMore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_consells" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/appLogo"
         android:layout_width="59dp"
         android:layout_height="58dp"
         android:layout_marginTop="31dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
         android:contentDescription="@string/appLogo"
         app:layout_constraintEnd_toStartOf="@+id/titol_main"
         app:layout_constraintHorizontal_bias="0.5"
@@ -78,6 +78,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/speak" />
+
+    <ImageView
+        android:id="@+id/imageMore"
+        android:layout_width="31dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="30dp"
+        android:contentDescription="@string/iconMore"
+        android:tint="#009688"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/more" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

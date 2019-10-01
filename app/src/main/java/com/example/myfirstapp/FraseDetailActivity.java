@@ -22,17 +22,17 @@ public class FraseDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_frase_detail);
 
 
-        //Associem cada recurs
+        //Let's associate each source
         mTextId = findViewById(R.id.textId);
         mTextFrase = findViewById(R.id.textFrase);
         mTextAutor = findViewById(R.id.textAutor);
 
-        //Recuperem l'Id i la frase
+        //Recovering the phrase id
         fraseId = getIntent().getIntExtra(Constants.EXTRA_INTENT_FRASE_DETAIL,1);
         FraseDao fraseDao = new FraseDao();
         frase = fraseDao.getFraseById(fraseId);
 
-        //Posem la informacio a la 2a activity
+        //Let's write down the information into the 2nd activity
         mTextId.setText(String.valueOf(frase.getId()));
         mTextFrase.setText((frase.getText()));
         mTextAutor.setText(frase.getAuthor());

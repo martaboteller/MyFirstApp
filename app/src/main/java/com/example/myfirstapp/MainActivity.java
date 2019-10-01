@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,11 +25,14 @@ public class MainActivity extends AppCompatActivity {
     private List<Frase> mCitesCelebres;
     private Random random;
     private Frase mFrase;
+    private ImageView imageMore;
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putInt(Constants.FRASE_KEY, mFrase.getId());
+        if (mFrase != null)  {
+            savedInstanceState.putInt(Constants.FRASE_KEY, mFrase.getId());
+        }
     }
 
 
@@ -37,12 +41,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Relacionem les instancies creades amb el layout
+        //Relating layout with created instances
         mConsellsButton = findViewById(R.id.button_consells);
         mFrasesButton = findViewById((R.id.button_frases));
         mTextFrases = findViewById(R.id.textFrases);
+        imageMore = findViewById(R.id.imageMore);
+        imageMore.setVisibility(View.INVISIBLE); //hiding button "more"
 
-        /*Creem un toast que mostri un missatge quan presionem els botons
+
+        /*Creating a toast that shows a message when pressing the buttons
         mConsellsButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick (View v) {
@@ -59,27 +66,28 @@ public class MainActivity extends AppCompatActivity {
         });*/
 
 
-        //Obtenim els llistats de frases
+        //Getting the phrase's list
         final FraseDao fraseDao = new FraseDao();
         mFrasesFetes = fraseDao.getFrases();
         mCitesCelebres = fraseDao.getConsells();
         random = new Random();
 
 
-        //Guardem sempre un "estat" amb id per defecte, 1
+        //Let's always save an state, for example with the first id = 1
         if (savedInstanceState != null) {
             mFrase = fraseDao.getFraseById(savedInstanceState.getInt(Constants.FRASE_KEY, 1));
-            fraseDao.setFraseText(mTextFrases, mFrase.getText());
+            //fraseDao.setFraseText(mTextFrases, mFrase.getText());
         }
 
-        //Creem un toast que mostri un missatge i al mateix temps escrivim el text al TextField
-        //I guardem el text a la variable mFrase
+        //Creating a toast that will show a message and at the same time will write down the phrase on the TextView field
+        //Saving the text into the mFrase variable
         mConsellsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Has premut el botó dels consells", Toast.LENGTH_SHORT).show();
                 mFrase = mCitesCelebres.get(random.nextInt((mCitesCelebres.size())));
                 fraseDao.setFraseText(mTextFrases, mFrase.getText());
+                imageMore.setVisibility(View.VISIBLE);
             }
         });
 
@@ -89,21 +97,39 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Has premut el botó de les frases fetes", Toast.LENGTH_SHORT).show();
                 mFrase = mFrasesFetes.get(random.nextInt((mFrasesFetes.size())));
                 fraseDao.setFraseText(mTextFrases, mFrase.getText());
+                imageMore.setVisibility(View.VISIBLE);
             }
         });
 
 
-        //Cridem a la segona Activity
+        //Let's call the second activity with:
         //public Intent (Context packageContext, class <?> class)
-        mTextFrases.setOnClickListener(new View.OnClickListener(){
+        imageMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v){
                 Intent intent = new Intent(MainActivity.this, FraseDetailActivity.class);
-                //Passem també l'Id per poder recuperar la frase
+                if (mFrase != null) {
+                    //Passing the Id in order to recover all the phrase info
+                    intent.putExtra(Constants.EXTRA_INTENT_FRASE_DETAIL, mFrase.getId());
+                    startActivity(intent);
+
+                }
+            }
+
+        });
+
+        //This listener pointed to the TextView field
+        /*mTextFrases.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View v){
+                Intent intent = new Intent(MainActivity.this, FraseDetailActivity.class);
+                //Passing the Id in order to recover all the phrase info
                 intent.putExtra(Constants.EXTRA_INTENT_FRASE_DETAIL, mFrase.getId());
                 startActivity(intent);
             }
-        });
+
+
+        });*/
 
 
     }
