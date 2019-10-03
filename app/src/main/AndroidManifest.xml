@@ -11,9 +11,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".FraseDetailActivity"
             android:parentActivityName=".MainActivity"
-            android:screenOrientation = "fullSensor"></activity>
+            ></activity>
         <activity android:name=".MainActivity"
-            android:screenOrientation = "fullSensor">
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
