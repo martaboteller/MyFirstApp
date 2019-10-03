@@ -19,7 +19,7 @@ The initial idea of this app has been created by the course organizers. Based on
 
 <div id="banner">
     <div class="inline-block">
- <img src="https://github.com/martaboteller/MyPlacesPublic/blob/master/MyPlaces/imagesForReadme/PQTM.png?raw=true" width="100" height="50" > 
+ <img src="https://github.com/martaboteller/MyPlacesPublic/blob/master/MyPlaces/imagesForReadme/PQTM.png?raw=true" width="120" height="50" > 
   <img src="https://github.com/martaboteller/MyFirstApp/blob/master/CIFO_logo.png?raw=true" width="50" height="50" hspace="30"> 
   </div>
 </div>
@@ -29,6 +29,8 @@ The initial idea of this app has been created by the course organizers. Based on
 ## Getting Started
 
 This project has been made using AndroidStudio 3.5 and tested on a Pixel 2 XL API 29 emulator. 
+
+This first app has been usefull to understand the MVC (Model View Controller) design
 
 
 ## Deployment
