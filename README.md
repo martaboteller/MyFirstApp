@@ -30,15 +30,25 @@ The initial idea of this app has been created by the course organizers. Based on
 
 This project has been made using AndroidStudio 3.5 and tested on a Pixel 2 XL API 29 emulator. 
 
-This first app has been usefull to understand the MVC (Model View Controller) design.
+This first app has been useful to understand the MVC (Model View Controller) design and what is the process that follows an activity.
 
 <div id="banner">
     <div class="inline-block">
  <img src="https://github.com/martaboteller/MyFirstApp/blob/master/mvc.png?raw=true" width="300" height="150" > 
-  <img src="https://github.com/martaboteller/MyFirstApp/blob/master/SO_process.png?raw=true" width="200" height="300" hspace="30"> 
+ <img src="https://github.com/martaboteller/MyFirstApp/blob/master/SO_process.png?raw=true" width="300" height="350" hspace="30"> 
   </div>
 </div>
 
+&nbsp;
+
+We have started learning to use the <i> drawable </i> folder with an <i>xml</i> file that defines a border format.
+And inside the resources folder a <i> strings.xml </i> file has been created containing the view's elements name.     
+
+&nbsp;
+
+Special attention has been given to the adaptation of the <i> activity_main.xml </i> layout to the horizontal and landscape orientation views. Always defining all needed constrains using a ConstraintLayout for this case.
+
+&nbsp;
 
 ## Deployment
 
@@ -50,10 +60,13 @@ Several ImageViews have been added together with an app Icon.
 
 Special attention has been paid to the display's adaptation depending on several resolutions (mdpi, hdpi, xhdpi, xxhdpi, xxxhdpi).
 
+&nbsp;
 
 ## Result
 
 Please feel free to send me an email should you need further information.
+
+&nbsp;
 
 ## Built With
 
@@ -61,15 +74,19 @@ Please feel free to send me an email should you need further information.
 * Java 
 * Pixel 2 XL API 29 emulator 
 
+&nbsp;
 
 ## Versioning
 
 First version of MyFirstApp (in Android) finished Oct 2019. 
 
+&nbsp;
+
 ## Authors
 
 * **Marta Boteller** - [Marta Boteller](https://github.com/martaboteller).
 
+&nbsp;
 
 ## Acknowledgments
 
