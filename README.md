@@ -9,12 +9,13 @@
   </div>
 </div>
  
+
+
 This is the first Android app created during a course entitled <i>Android Application Developer</i> carried out at the CIFO thanks to a grant from the Generalitat of Catalonia and the European Union.
 
 The initial idea of this app has been created by the course organizers. Based on that initial idea I have created my own version of MyFirstApp (in Android). 
 
-With this application two kind of texts are displayed depending on a pressed button: "Consells (Advices)" or "Frases Fetes (Set Phrases)". 
-
+&nbsp;&nbsp;
 
 <div id="banner">
     <div class="inline-block">
@@ -32,16 +33,18 @@ This project has been made using AndroidStudio 3.5 and tested on a Pixel 2 XL AP
 
 ## Deployment
 
-Please find below the screen views designed for this project:
+With this application two kind of texts are displayed on a TextView depending on a pressed button: "Consells (Advices)" or "Frases Fetes (Set Phrases)". As soon as the text is displayed a "more" icon is shown giving access to the second activity (FraseDetailActivity.java). 
+
+In the second screen more detailed information is shown related to a specific phrase: Id, Author and Text.
+
+Several ImageViews have been added together with an app Icon. 
+
+Special attention has been paid to the display's adaptation depending on several resolutions (mdpi, hdpi, xhdpi, xxhdpi, xxxhdpi).
 
 
-
-### Result
-
+## Result
 
 Please feel free to send me an email should you need further information.
-
-<img src="https://github.com/martaboteller/MyPlacesPublic/blob/master/MyPlaces/imagesForReadme/blackIphoneTable.png?raw=true" width="550" height="400" title="Icons" hspace="30">
 
 ## Built With
 
