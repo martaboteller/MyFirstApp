@@ -9,7 +9,7 @@
   </div>
 </div>
  
-
+&nbsp;&nbsp;
 
 This is the first Android app created during a course entitled <i>Android Application Developer</i> carried out at the CIFO thanks to a grant from the Generalitat of Catalonia and the European Union.
 
@@ -30,7 +30,14 @@ The initial idea of this app has been created by the course organizers. Based on
 
 This project has been made using AndroidStudio 3.5 and tested on a Pixel 2 XL API 29 emulator. 
 
-This first app has been usefull to understand the MVC (Model View Controller) design
+This first app has been usefull to understand the MVC (Model View Controller) design.
+
+<div id="banner">
+    <div class="inline-block">
+ <img src="https://github.com/martaboteller/MyFirstApp/blob/master/mvc.png?raw=true" width="300" height="150" > 
+  <img src="https://github.com/martaboteller/MyFirstApp/blob/master/SO_process.png?raw=true" width="200" height="300" hspace="30"> 
+  </div>
+</div>
 
 
 ## Deployment
