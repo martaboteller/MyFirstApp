@@ -46,7 +46,7 @@ And inside the resources folder a <i> strings.xml </i> file has been created con
 
 &nbsp;
 
-Special attention has been given to the adaptation of the <i> activity_main.xml </i> layout to the horizontal and landscape orientation views. Always defining all needed constrains using a ConstraintLayout for this case.
+Special attention has been given to the adaptation of the <i> activity_main.xml </i> layout to the horizontal and landscape orientation views. Always defining all needed constrains using a ConstraintLayout.
 
 &nbsp;
 
@@ -58,7 +58,7 @@ In the second screen more detailed information is shown related to a specific ph
 
 Several ImageViews have been added together with an app Icon. 
 
-Special attention has been paid to the display's adaptation depending on several resolutions (mdpi, hdpi, xhdpi, xxhdpi, xxxhdpi).
+Particular emphasis has been maid to the display's adaptation depending on several resolutions (mdpi, hdpi, xhdpi, xxhdpi, xxxhdpi).
 
 &nbsp;
 
