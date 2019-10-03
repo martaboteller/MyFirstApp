@@ -1,6 +1,13 @@
 # MyFirstApp (in Android)
- <img src="https://github.com/martaboteller/MyFirstApp/blob/master/ConsultoriFrases.png?raw=true" width="200" height="400">
- 
+
+<div id="presentation">
+    <div class="inline-block">
+ <img src="https://github.com/martaboteller/MyFirstApp/blob/master/ConsultoriFrases.png?raw=true" width="180" height="380" > 
+ <img src="https://github.com/martaboteller/MyFirstApp/blob/master/ConsultoriFrases2.png?raw=true" width="180" height="380" hspace="20"> 
+ <img src="https://github.com/martaboteller/MyFirstApp/blob/master/ConsultoriFrases3.png?raw=true" width="180" height="380" > 
+ <img src="https://github.com/martaboteller/MyFirstApp/blob/master/ConsultoriFrases4.png?raw=true" width="180" height="380" hspace="20"> 
+  </div>
+</div>
  
 This is the final project of a course entitled <i>IOS Application Developer</i> carried out at the UOC university thanks to a 
 grant from the Generalitat of Catalonia and the European Union.
