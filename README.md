@@ -1,5 +1,6 @@
 # MyFirstApp (in Android)
- <img src="https://github.com/martaboteller/MyPlacesPublic/blob/master/MyPlaces/imagesForReadme/pinkIphonewithApp.png?raw=true" width="500" height="450">
+ <img src="https://github.com/martaboteller/MyFirstApp/blob/master/ConsultoriFrases.png?raw=true" width="200" height="400">
+ 
  
 This is the final project of a course entitled <i>IOS Application Developer</i> carried out at the UOC university thanks to a 
 grant from the Generalitat of Catalonia and the European Union.
