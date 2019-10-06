@@ -2,7 +2,9 @@ package com.example.myfirstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.example.myfirstapp.model.Constants;
@@ -37,5 +39,22 @@ public class FraseDetailActivity extends AppCompatActivity {
         mTextFrase.setText((frase.getText()));
         mTextAutor.setText(frase.getAuthor());
 
+
+
     }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            //Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                //Going back to home
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
 }

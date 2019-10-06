@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         imageMore.setVisibility(View.INVISIBLE); //hiding button "more"
 
 
+        //First test of creating a toast
         /*Creating a toast that shows a message when pressing the buttons
         mConsellsButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -76,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         //Let's always save an state, for example with the first id = 1
         if (savedInstanceState != null) {
             mFrase = fraseDao.getFraseById(savedInstanceState.getInt(Constants.FRASE_KEY, 1));
-            //fraseDao.setFraseText(mTextFrases, mFrase.getText());
+            fraseDao.setFraseText(mTextFrases, mFrase.getText());
         }
 
         //Creating a toast that will show a message and at the same time will write down the phrase on the TextView field
@@ -88,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 mFrase = mCitesCelebres.get(random.nextInt((mCitesCelebres.size())));
                 fraseDao.setFraseText(mTextFrases, mFrase.getText());
                 imageMore.setVisibility(View.VISIBLE);
+
             }
         });
 
@@ -98,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 mFrase = mFrasesFetes.get(random.nextInt((mFrasesFetes.size())));
                 fraseDao.setFraseText(mTextFrases, mFrase.getText());
                 imageMore.setVisibility(View.VISIBLE);
+
             }
         });
 
@@ -118,18 +121,10 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-        //This listener pointed to the TextView field
-        /*mTextFrases.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick (View v){
-                Intent intent = new Intent(MainActivity.this, FraseDetailActivity.class);
-                //Passing the Id in order to recover all the phrase info
-                intent.putExtra(Constants.EXTRA_INTENT_FRASE_DETAIL, mFrase.getId());
-                startActivity(intent);
-            }
-
-
-        });*/
+        //Show "more" icon if the textView is not empty
+        if (mTextFrases.length() != 0) {
+            imageMore.setVisibility(View.VISIBLE);
+        }
 
 
     }
